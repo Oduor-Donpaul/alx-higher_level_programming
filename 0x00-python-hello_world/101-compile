@@ -1,0 +1,16 @@
+#!/usr/bin/python3
+import os
+import compileall
+pyfile = os.getenv('PYFILE')
+if pyfile is None:
+    print("PYFILE environment variable is not set.")
+    exit(1)
+pycfile = pyfile + 'c'
+
+try:
+    # Compile the Python script
+    compileall.compile_file(pyfile, force=True)
+
+except Exception as e:
+    print(f"Compilation error: {e}")
+    exit(1)
