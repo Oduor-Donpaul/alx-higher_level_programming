@@ -1,0 +1,39 @@
+The "0-add_integer" module
+==========================
+
+Using "add_integer"
+
+Importing function from a module:
+
+    >>> add_integer = __import__("0-add_integer").add_integer
+
+Adding 1 and 89:
+
+    >>> add_integer(1, 89)
+    90
+
+Adding float:
+
+    >>> add_integer(100.3, 2)
+    103
+
+Adding string:
+
+    >>> add_integer(4, "school")
+    Traceback (most recent call last):
+               ...
+    TypeError: b must be an integer
+
+Passing None:
+
+    >>> add_integer(None)
+    Traceback (most recent call last):
+               ...
+    TypeError: a must be an integer
+
+Adding two caharacters:
+
+    >>> add_integer('l', '4')
+    Traceback (most recent call last)
+               ...
+    TypeError: a must be an integer
