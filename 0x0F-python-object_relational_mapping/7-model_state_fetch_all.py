@@ -1,4 +1,4 @@
-#!/usr/nin/python3
+#!/usr/bin/python3
 """ List all objects from database """
 
 from modal_state import Base, State
